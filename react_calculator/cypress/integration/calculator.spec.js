@@ -70,12 +70,12 @@ describe("Calculator", () => {
     cy.get('.display').should('contain', '139535');
   })
   
-  it('should return Infinity when divided by 0', () => {
+  it('should return 0 when divided by 0', () => {
     cy.get('#number1').click();
     cy.get('#operator-divide').click();
     cy.get('#number0').click();
     cy.get('#operator-equals').click();
-    cy.get('.display').should('contain', 'Infinity');
+    cy.get('.display').should('contain', '0');
   })
 
 
